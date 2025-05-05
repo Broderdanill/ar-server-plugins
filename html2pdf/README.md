@@ -17,7 +17,7 @@ Requires:
 - arapi251_build001.jar
 - arutil251_build001.jar
 - arpluginsvr251_build001.jar
-- openhtmltopdf-pdfbox-1.0.10.jar (and dependencies)
+- 3 (and dependencies)
 
 Example compile:
 javac -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d classes HtmlToPdfPlugin.java

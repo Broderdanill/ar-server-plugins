@@ -12,7 +12,7 @@ This AR Server Java plugin URL-encodes a given string using UTF-8 encoding.
 
 ## Compilation Instructions:
 
-javac -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d classes URLEncoderPlugin.java
+javac --release 17 -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d classes URLEncoderPlugin.java
 
 jar cf urlencoderplugin.jar -C classes .
 

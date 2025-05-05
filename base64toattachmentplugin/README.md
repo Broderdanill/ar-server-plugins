@@ -15,14 +15,14 @@ and returns a valid AR AttachmentValue.
    mkdir classes
 
 2. Compile:
-   javac -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d classes Base64ToAttachmentPlugin.java
+   javac --release 17 -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d classes Base64ToAttachmentPlugin.java
 
 3. Create JAR:
    jar cf base64toattachment.jar -C classes .
 
 4. Plugin config (pluginsvr_config.xml):
    <plugin>
-     <name>AttachmentPlugin</name>
+     <name>Base64ToAttachmentPlugin</name>
      <classname>com.example.Base64ToAttachmentPlugin</classname>
      <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/base64toattachment.jar</pathelement>
    </plugin>
