@@ -14,7 +14,7 @@ and returns the first full match (like Matcher.find() + group()).
 
 ## Compilation Instructions:
 
-javac -cp "arapi251_build001.jar:arutil251_build001.jar:arpluginsvr251_build001.jar" -d classes RegexMatchPlugin.java
+javac -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" RegexMatchPlugin.java
 
 jar cf regexmatchplugin.jar -C classes .
 
