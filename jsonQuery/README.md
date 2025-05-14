@@ -75,8 +75,15 @@ jar cf jsonqueryplugin.jar -C classes .
 <plugin>
   <name>JsonPlugin</name>
   <classname>com.example.JsonQueryPlugin</classname>
+  <filename>/opt/bmc/ARSystem/pluginsvr/jsonqueryplugin.jar</filename>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/jsonqueryplugin.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/json-path-2.9.0.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-core-2.19.0.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-databind-2.19.0.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-annotations-2.19.0.jar</pathelement>
+
 </plugin>
+
 
 ### 🧪 Example Usage in AR System Filter
 
@@ -91,4 +98,3 @@ Input Mapping:
 Return Mapping:
     Result Index 0 → Text field (e.g., Json_Value_Result)
 
-    
