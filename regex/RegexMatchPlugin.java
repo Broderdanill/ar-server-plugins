@@ -1,4 +1,4 @@
-package com.example;
+package regex;
 
 import com.bmc.arsys.pluginsvr.plugins.ARFilterAPIPlugin;
 import com.bmc.arsys.pluginsvr.plugins.ARPluginContext;
