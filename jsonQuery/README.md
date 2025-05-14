@@ -75,7 +75,6 @@ jar cf jsonqueryplugin.jar -C classes .
 <plugin>
   <name>JsonPlugin</name>
   <classname>com.example.JsonQueryPlugin</classname>
-  <filename>/opt/bmc/ARSystem/pluginsvr/jsonqueryplugin.jar</filename>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/jsonqueryplugin.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/json-path-2.9.0.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-core-2.19.0.jar</pathelement>

@@ -67,7 +67,6 @@ jar cf htmltopdfplugin.jar -C classes .
 <plugin>
   <name>PdfPlugin</name>
   <classname>com.example.HtmlToPdfPlugin</classname>
-  <filename>/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin.jar</filename>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-pdfbox-1.0.10.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-core-1.0.10.jar</pathelement>

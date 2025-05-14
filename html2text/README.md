@@ -63,7 +63,6 @@ jar cf htmltotextplugin.jar -C classes .
 <plugin>
   <name>HTMLToTextPlugin</name>
   <classname>com.example.HtmlToTextPlugin</classname>
-  <filename>/opt/bmc/ARSystem/pluginsvr/htmltotextplugin.jar</filename>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltotextplugin.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jsoup-1.20.1.jar</pathelement>
 </plugin>
