@@ -62,12 +62,17 @@ javac --release 17 \
 jar cf htmltopdfplugin.jar -C classes .
 
 
-### Plugin Configuration (pluginsvr_config.xml)
+### Plugin Configuration (pluginsvr_config.xml) - Copy all needed files to pluginsvrfolder aswell
 
 <plugin>
   <name>PdfPlugin</name>
   <classname>com.example.HtmlToPdfPlugin</classname>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-pdfbox-1.0.10.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-core-1.0.10.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/pdfbox-3.0.5.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/fontbox-3.0.5.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/commons-io-20030203.000550.jar</pathelement>
 </plugin>
 
 
