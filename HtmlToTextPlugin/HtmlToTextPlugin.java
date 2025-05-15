@@ -39,13 +39,20 @@ public class HtmlToTextPlugin extends ARFilterAPIPlugin {
     private String convertHtmlToText(String html) {
         Document doc = Jsoup.parse(html);
         doc.select("script, style").remove();  // Ta bort irrelevanta delar
-        String text = doc.text();
 
-        // Ta bort överflödiga radbrytningar/whitespace
-        text = text.replaceAll("[ \\t\\x0B\\f]+", " ");        // Multipla blanksteg → en
-        text = text.replaceAll("(\\r?\\n){2,}", "\n");         // Fler än en radbrytning → en
-        text = text.trim();
+        // Lägg till radbrytningar där det är semantiskt relevant
+        doc.select("br").append("\\n");
+        doc.select("p, h1, h2, h3, h4, h5, h6, li").append("\\n");
 
-        return text;
+        String text = doc.text().replaceAll("\\\\n", "\n");
+
+        // Rensa upp whitespace utan att förstöra radbrytningar
+        text = text.replaceAll("[ \\t\\x0B\\f]+", " ");   // Flera mellanslag → ett
+        text = text.replaceAll("(?m)^\\s+", "");          // Mellanslag i början av rader
+        text = text.replaceAll("(?m)\\s+$", "");          // Mellanslag i slutet av rader
+        text = text.replaceAll("\n{3,}", "\n\n");         // Max två radbrytningar i rad
+
+        return text.trim();
     }
+
 }
