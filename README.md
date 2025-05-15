@@ -4,4 +4,7 @@ To be able to load these you will need to first set up a custom plugin server, r
 
 All these plugins are not intended to be used in production environment, please review the code before doing so.
 
+# Nice to know!
 
+### Restart pluginserver in container (sandbox)
+pkill -f javapluginserver

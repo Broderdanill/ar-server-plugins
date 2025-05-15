@@ -97,3 +97,22 @@ Input Mapping:
 Return Mapping:
     Result Index 0 → Text field (e.g., Json_Value_Result)
 
+
+
+### Test Data for input
+
+{
+  "user": {
+    "id": 123,
+    "name": "Anna Andersson",
+    "email": "anna@example.com"
+  },
+  "active": true,
+  "roles": ["admin", "editor"]
+}
+
+
+user.name	Namnet	"Anna Andersson"
+user.email	E-postadress	"anna@example.com"
+roles[0]	Första roll	"admin"
+active	Om användaren är aktiv	true
