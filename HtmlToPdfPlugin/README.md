@@ -81,7 +81,7 @@ jar cf htmltopdfplugin.jar -C classes .
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/fontbox-2.0.27.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/xmpbox-2.0.27.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/commons-io-2.11.0.jar</pathelement>
-  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/graphics2d-0.39</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/graphics2d-0.39.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jsoup-1.20.1.jar</pathelement>
 </plugin>
 
