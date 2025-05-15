@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.io.ByteArrayOutputStream;
 
 import com.openhtmltopdf.pdfboxout.PdfRendererBuilder;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 public class HtmlToPdfPlugin extends ARFilterAPIPlugin {
 
@@ -24,7 +26,16 @@ public class HtmlToPdfPlugin extends ARFilterAPIPlugin {
         byte[] pdfBytes;
 
         try {
+            // 🧼 Rensa HTML med jsoup och konvertera till XHTML
+            Document cleaned = Jsoup.parse(html);
+            cleaned.outputSettings().syntax(Document.OutputSettings.Syntax.xml);
+            cleaned.outputSettings().escapeMode(org.jsoup.nodes.Entities.EscapeMode.xhtml);
+            cleaned.outputSettings().prettyPrint(true);
+            cleaned.outputSettings().charset("UTF-8");
+            html = cleaned.html();
+
             pdfBytes = generatePdfFromHtml(html);
+
         } catch (Exception e) {
             List<StatusInfo> statusList = new ArrayList<>();
             statusList.add(new StatusInfo(3, 10001, "Fel vid PDF-generering: " + e.getMessage()));

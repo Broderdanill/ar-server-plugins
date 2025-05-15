@@ -49,6 +49,8 @@ Place all JARs in a `../arapi/` folder (or equivalent).
 - fontbox-2.0.27.jar
 - xmpbox-2.0.27.jar
 - commons-io-2.11.0.jar
+- graphics2d-0.39.jar
+- jsoup-1.20.1.jar
 
 
 
@@ -58,7 +60,7 @@ Place all JARs in a `lib/` folder (or equivalent).
 
 ```bash
 javac --release 17 \
-  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/openhtmltopdf-core-1.0.10.jar:./lib/openhtmltopdf-pdfbox-1.0.10.jar:./lib/pdfbox-2.0.27.jar:./lib/fontbox-2.0.27.jar:./lib/xmpbox-2.0.27.jar:./lib/commons-io-2.11.0.jar" \
+  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/openhtmltopdf-core-1.0.10.jar:./lib/openhtmltopdf-pdfbox-1.0.10.jar:./lib/pdfbox-2.0.27.jar:./lib/fontbox-2.0.27.jar:./lib/xmpbox-2.0.27.jar:./lib/commons-io-2.11.0.jar:./lib/graphics2d-0.39.jar:./lib/jsoup-1.20.1.jar" \
   -d classes \
   HtmlToPdfPlugin.java
   ```
@@ -79,6 +81,8 @@ jar cf htmltopdfplugin.jar -C classes .
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/fontbox-2.0.27.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/xmpbox-2.0.27.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/commons-io-2.11.0.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/graphics2d-0.39</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jsoup-1.20.1.jar</pathelement>
 </plugin>
 
 
@@ -93,3 +97,7 @@ Plugin Call Settings:
 
   Return Mapping:
     Result Index 0 → Attachment field (e.g., PDF_File)
+
+
+### Restart pluginserver in container (sandbox)
+pkill -f javapluginserver
