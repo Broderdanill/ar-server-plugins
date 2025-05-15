@@ -73,7 +73,7 @@ jar cf jsonqueryplugin.jar -C classes .
 
 ### ⚙️ Plugin Configuration (pluginsvr_config.xml)
 <plugin>
-  <name>JsonPlugin</name>
+  <name>JsonQueryPlugin</name>
   <classname>com.example.JsonQueryPlugin</classname>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/jsonqueryplugin.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/json-path-2.9.0.jar</pathelement>

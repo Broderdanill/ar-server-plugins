@@ -19,7 +19,7 @@ jar cf urlencoderplugin.jar -C classes .
 ## Plugin XML config:
 
 <plugin>
-  <name>URLPlugin</name>
+  <name>URLEncoderPlugin</name>
   <classname>com.example.URLEncoderPlugin</classname>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/urlencoderplugin.jar</pathelement>
 </plugin>

@@ -27,7 +27,7 @@ These can be copied from container running ar-server (copy files to bmcapi-folde
 6. Konfigurera den nya jar-filen i ar plugin server
 
 <plugin>
-  <name>RandomPlugin</name>
+  <name>RandomNumberPlugin</name>
   <classname>com.example.RandomNumberPlugin</classname>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/randomplugin-dynamic.jar</pathelement>
 </plugin>

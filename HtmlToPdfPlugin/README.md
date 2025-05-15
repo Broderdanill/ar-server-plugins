@@ -71,7 +71,7 @@ jar cf htmltopdfplugin.jar -C classes .
 ### Plugin Configuration (pluginsvr_config.xml) - Copy all needed files to pluginsvrfolder aswell
 
 <plugin>
-    <name>PdfPlugin</name>
+    <name>HTMLToPdfPlugin</name>
     <classname>com.example.HtmlToPdfPlugin</classname>
     <!-- This plugin -->
     <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin.jar</pathelement>
