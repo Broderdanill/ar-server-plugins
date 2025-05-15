@@ -46,6 +46,8 @@ You need the following JARs:
 - `pdfbox-3.0.5.jar`
 - `fontbox-3.0.5.jar`
 - `commons-io-20030203.000550.jar`
+- `xmpbox-3.0.5.jar`
+
 
 Place all JARs in a `lib/` folder (or equivalent).
 
