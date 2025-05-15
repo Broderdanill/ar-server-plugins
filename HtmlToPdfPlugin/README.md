@@ -40,6 +40,8 @@ You need the following JARs:
 - `arutil251_build001.jar`
 - `arpluginsvr251_build001.jar`
 
+Place all JARs in a `../arapi/` folder (or equivalent).
+
 #### External Libraries:
 - `openhtmltopdf-core-1.0.10.jar`
 - `openhtmltopdf-pdfbox-1.0.10.jar`
@@ -55,7 +57,7 @@ Place all JARs in a `lib/` folder (or equivalent).
 
 ```bash
 javac --release 17 \
-  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/commons-io-20030203.000550.jar:./lib/fontbox-3.0.5.jar:./lib/openhtmltopdf-core-1.0.10.jar:./lib/openhtmltopdf-pdfbox-1.0.10.jar:./lib/pdfbox-3.0.5.jar" \
+  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/commons-io-20030203.000550.jar:./lib/fontbox-3.0.5.jar:./lib/openhtmltopdf-core-1.0.10.jar:./lib/openhtmltopdf-pdfbox-1.0.10.jar:./lib/pdfbox-3.0.5.jar:./lib/xmpbox-3.0.5.jar" \
   -d classes \
   HtmlToPdfPlugin.java
   ```
@@ -75,6 +77,8 @@ jar cf htmltopdfplugin.jar -C classes .
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/pdfbox-3.0.5.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/fontbox-3.0.5.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/commons-io-20030203.000550.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/xmpbox-3.0.5.jar</pathelement>
+
 </plugin>
 
 
