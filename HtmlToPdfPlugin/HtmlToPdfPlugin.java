@@ -23,6 +23,18 @@ public class HtmlToPdfPlugin extends ARFilterAPIPlugin {
         }
 
         String html = (String) args.get(0).getValue();
+        String filename = "generated.pdf"; // Defaultnamn
+
+        if (args.size() >= 2 && args.get(1).getValue() instanceof String) {
+            String inputName = ((String) args.get(1).getValue()).trim();
+            if (!inputName.isEmpty()) {
+                filename = inputName;
+                if (!filename.toLowerCase().endsWith(".pdf")) {
+                    filename += ".pdf";
+                }
+            }
+        }
+
         byte[] pdfBytes;
 
         try {
@@ -43,7 +55,7 @@ public class HtmlToPdfPlugin extends ARFilterAPIPlugin {
         }
 
         List<Value> results = new ArrayList<>();
-        AttachmentValue attachment = new AttachmentValue("generated.pdf", pdfBytes);
+        AttachmentValue attachment = new AttachmentValue(filename, pdfBytes);
         results.add(new Value(attachment));
         return results;
     }

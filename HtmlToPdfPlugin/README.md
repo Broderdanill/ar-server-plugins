@@ -17,8 +17,7 @@ Useful for generating PDF documents (e.g., reports, invoices) directly from form
 This plugin takes **one parameter**:
 
 1. **HTML Content** – A valid HTML string (typically from a text field)
-
-> ⚠️ PDF filename is currently fixed as `generated.pdf`. Can be enhanced to accept filename as second parameter.
+2. **Filename** – A valid string (example "mytestfile.pdf")
 
 ---
 
