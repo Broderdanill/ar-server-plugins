@@ -43,13 +43,12 @@ You need the following JARs:
 Place all JARs in a `../arapi/` folder (or equivalent).
 
 #### External Libraries:
-- `openhtmltopdf-core-1.0.10.jar`
-- `openhtmltopdf-pdfbox-1.0.10.jar`
-- `pdfbox-3.0.5.jar`
-- `fontbox-3.0.5.jar`
-- `commons-io-2.11.0.jar`
-- `xmpbox-3.0.5.jar`
-- `pdfbox-tools-3.0.5.jar`
+- openhtmltopdf-core-1.0.10.jar
+- openhtmltopdf-pdfbox-1.0.10.jar
+- pdfbox-2.0.27.jar
+- fontbox-2.0.27.jar
+- xmpbox-2.0.27.jar
+- commons-io-2.11.0.jar
 
 
 
@@ -59,7 +58,7 @@ Place all JARs in a `lib/` folder (or equivalent).
 
 ```bash
 javac --release 17 \
-  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/commons-io-2.11.0.jar:./lib/fontbox-3.0.5.jar:./lib/openhtmltopdf-core-1.0.10.jar:./lib/openhtmltopdf-pdfbox-1.0.10.jar:./lib/pdfbox-3.0.5.jar:./lib/xmpbox-3.0.5.jar:./lib/pdfbox-tools-3.0.5.jar" \
+  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/openhtmltopdf-core-1.0.10.jar:./lib/openhtmltopdf-pdfbox-1.0.10.jar:./lib/pdfbox-2.0.27.jar:./lib/fontbox-2.0.27.jar:./lib/xmpbox-2.0.27.jar:./lib/commons-io-2.11.0.jar" \
   -d classes \
   HtmlToPdfPlugin.java
   ```
@@ -71,20 +70,15 @@ jar cf htmltopdfplugin.jar -C classes .
 ### Plugin Configuration (pluginsvr_config.xml) - Copy all needed files to pluginsvrfolder aswell
 
 <plugin>
-    <name>HTMLToPdfPlugin</name>
-    <classname>com.example.HtmlToPdfPlugin</classname>
-    <!-- This plugin -->
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin.jar</pathelement>
-    <!-- HTML till PDF -->
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-pdfbox-1.0.10.jar</pathelement>
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-core-1.0.10.jar</pathelement>
-    <!-- PDFBox and Deps -->
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/pdfbox-3.0.5.jar</pathelement>
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/fontbox-3.0.5.jar</pathelement>
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/xmpbox-3.0.5.jar</pathelement>
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/pdfbox-tools-3.0.5.jar</pathelement>
-    <!-- Commons IO -->
-    <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/commons-io-2.11.0.jar</pathelement>
+  <name>HtmlToPdfPlugin</name>
+  <classname>com.example.HtmlToPdfPlugin</classname>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-core-1.0.10.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/openhtmltopdf-pdfbox-1.0.10.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/pdfbox-2.0.27.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/fontbox-2.0.27.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/xmpbox-2.0.27.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/commons-io-2.11.0.jar</pathelement>
 </plugin>
 
 
