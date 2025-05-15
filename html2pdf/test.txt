@@ -1,0 +1,23 @@
+mkdir -p build-fat
+cd build-fat
+
+# 1. Lägg in dina egna klasser
+cp -r ../classes/* .
+
+# 2. Extrahera alla externa bibliotek (utan META-INF)
+for j in ../lib/*.jar; do
+  jar xf "$j"
+done
+
+# 3. Ta bort ev META-INF-manifest som kan krocka
+rm -rf META-INF
+
+# 4. Skapa fat JAR
+jar cf ../htmltopdfplugin-fat.jar .
+
+
+<plugin>
+  <name>PdfPlugin</name>
+  <classname>com.example.HtmlToPdfPlugin</classname>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/htmltopdfplugin-fat.jar</pathelement>
+</plugin>
