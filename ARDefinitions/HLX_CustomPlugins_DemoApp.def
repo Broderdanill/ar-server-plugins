@@ -1,20 +1,20 @@
 char-set: UTF-8
 #
-#  File exported Fri May 16 05:22:07 UTC 2025
+#  File exported Fri May 16 06:26:58 UTC 2025
 #
 begin schema
    name           : HLX:CustomPlugin
    core-version   : 2
    upgrade-version: 0
-   num-fields     : 60
-   timestamp      : 1747372659
+   num-fields     : 62
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
    default-vui    : Default Administrator View__c
    num-vuis       : 2
    export-version : 12
    schema-type    : 4
-   next-field-id  : 536870984
+   next-field-id  : 536870986
    object-prop    : 3\0\0\90016\4\1\1\90015\2\4\
    assoc-to-follow-type : archive
   assoc-to-follow : 
@@ -69,7 +69,7 @@ field {
    fieldtype      : 1
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870912\47\3\41\2\449\2200\95049\43700\4\6\1\7\40\2147483651\11\4\8\0xC1BAAE\14\40\1\20\4\24\Base64ToAttachmentPlugin\24\4\4\0x00\143\40\0\168\40\1\169&
@@ -149,7 +149,7 @@ field {
    fieldtype      : 1
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870912\47\3\41\2\449\2200\95049\43700\4\6\1\7\40\2147483652\11\4\8\0xC1BAAE\14\40\1\20\4\12\RandomNumber\24\4\4\0x00\143\40\1\168\40\1\169\40\1\170\40&
@@ -285,7 +285,7 @@ field {
    fieldtype      : 0
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870912\47\3\41\2\449\2200\95049\43700\4\6\1\7\40\2147483659\11\4\8\0xC1BAAE\14\40\1\20\4\5\Regex\24\4\4\0x00\143\40\2\168\40\1\169\40\1\170\40\5368709&
@@ -305,7 +305,7 @@ field {
    fieldtype      : 0
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870912\47\3\41\2\449\2200\95049\43700\4\6\1\7\40\2147483660\11\4\8\0xC1BAAE\14\40\1\20\4\10\URLEncoder\24\4\4\0x00\143\40\3\168\40\1\169\40\1\170\40\5&
@@ -619,7 +619,7 @@ field {
    fieldtype      : 0
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870912\47\3\41\2\449\2200\95049\43700\4\6\1\7\40\2147483670\11\4\8\0xC1BAAE\14\40\1\20\4\10\HTMLToText\24\4\4\0x00\143\40\4\168\40\1\169\40\1\170\40\5&
@@ -798,7 +798,7 @@ field {
    fieldtype      : 0
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870941\48\3\41\2\449\2200\95049\54300\4\6\1\7\40\2147483674\11\4\8\0xC1BAAE\14\40\1\20\4\9\JsonQuery\24\4\4\0x00\27\8\2\143\40\5\168\40\1\169\40\1\170&
@@ -814,7 +814,7 @@ field {
    fieldtype      : 0
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372374
+   timestamp      : 1747375704
    owner          : u0017931
    last-changed   : dice
  display-instance : 536870941\48\3\41\2\449\2200\95049\54300\4\6\1\7\40\2147483675\11\4\8\0xC1BAAE\14\40\1\20\4\9\HtmlToPdf\24\4\4\0x00\27\8\2\143\40\6\168\40\1\169\40\1\170&
@@ -999,10 +999,10 @@ field {
    fieldtype      : 0
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372375
+   timestamp      : 1747375704
    owner          : dice
    last-changed   : dice
- display-instance : 536870941\48\6\0\3\41\2\449\2200\95049\54300\4\6\1\7\40\2147483684\11\4\8\0xC1BAAE\14\40\1\20\4\8\RestHttp\24\4\4\0x00\27\8\2\143\40\7\168\40\1\169\40\1\&
+ display-instance : 536870941\48\3\41\2\449\2200\95049\54300\4\6\1\6\0\7\40\2147483684\11\4\8\0xC1BAAE\14\40\1\20\4\8\RestHttp\24\4\4\0x00\27\8\2\143\40\7\168\40\1\169\40\1\&
  display-instance : 170\40\536870917\272\6\0\281\6\1\282\4\8\0xC98821\283\2\0\284\2\0\285\2\0\286\6\1\292\2\0\294\2\0\296\4\8\0xFFFFFF\297\6\0\298\4\3\1.0\305\4\8\0xFFFFFF\3&
  display-instance : 06\6\0\308\2\0\309\6\0\310\6\0\327\4\1\1\5073\6\0\5074\4\4\NONE\5076\4\4\NONE\5077\4\4\NONE\5216\40\0\5233\4\0\\5234\4\4\left\5235\4\4\NONE\5244\4\4\NONE&
  display-instance : \5245\4\4\NONE\5246\6\1\5247\6\1\5248\6\1\5299\2\0\5311\6\0\5397\4\0\\5398\4\0\\
@@ -1121,12 +1121,12 @@ field {
 }
 field {
    id             : 536870980
-   name           : REST_Result
+   name           : REST_StatusCode
    datatype       : 4
    fieldtype      : 1
    create-mode    : 2
    option         : 4
-   timestamp      : 1747372455
+   timestamp      : 1747375704
    owner          : dice
    last-changed   : dice
    length-units   : 0
@@ -1135,10 +1135,10 @@ field {
    menu-style     : 2
    qbe-match-op   : 1
    fulltext-optns : 0
- display-instance : 536870941\43\4\0\3\41\2\2249\41000\20021\43900\4\6\1\5\6\2\7\40\2147483690\14\40\1\20\4\6\Result\21\41\2\0\0\8436\1000\27\8\2\60\40\1\66\41\2\15748\1100\&
- display-instance : 17772\2900\143\40\4294967295\151\41\2\0\1100\15185\2900\170\40\536870969\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\4\4\le&
- display-instance : ft\5296\4\0\\5302\6\0\5314\6\0\5315\2\0\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5379\2\0\5380\4\0&
- display-instance : \\5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\5403\6\0\
+ display-instance : 536870941\42\3\41\2\2249\41000\20021\43900\4\6\1\5\6\2\7\40\2147483690\14\40\1\20\4\11\Status Code\21\41\2\0\0\8436\1000\27\8\2\60\40\1\66\41\2\15748\110&
+ display-instance : 0\17772\2900\143\40\4294967295\151\41\2\0\1100\15185\2900\170\40\536870969\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\4\4\&
+ display-instance : left\5296\4\0\\5302\6\0\5314\6\0\5315\2\0\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5379\2\0\5380\4&
+ display-instance : \0\\5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\5403\6\0\
    object-prop    : 2\90016\4\1\1\90015\2\4\
 }
 field {
@@ -1199,6 +1199,50 @@ field {
  display-instance : \5231\4\0\\5232\4\0\\5233\4\0\\5234\4\4\left\5376\6\0\5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\
    object-prop    : 2\90016\4\1\1\90015\2\4\
 }
+field {
+   id             : 536870984
+   name           : REST_StatusText
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1747375704
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 0
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+ display-instance : 536870941\43\4\0\3\41\2\2249\45900\20021\48800\4\6\1\5\6\2\7\40\2147483694\14\40\1\20\4\11\Status Text\21\41\2\0\0\7874\1000\27\8\2\60\40\1\66\41\2\15748&
+ display-instance : \1100\17772\2900\143\40\4294967295\151\41\2\0\1100\15185\2900\170\40\536870969\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\&
+ display-instance : 4\4\left\5296\4\0\\5302\6\0\5314\6\0\5315\2\0\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5379\2\0\53&
+ display-instance : 80\4\0\\5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\5403\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
+field {
+   id             : 536870985
+   name           : REST_ResultBody
+   datatype       : 4
+   fieldtype      : 1
+   create-mode    : 2
+   option         : 4
+   timestamp      : 1747375704
+   owner          : dice
+   last-changed   : dice
+   length-units   : 0
+   maxlength      : 0
+   clob-store-opt : 0
+   menu-style     : 2
+   qbe-match-op   : 1
+   fulltext-optns : 0
+ display-instance : 536870941\43\4\0\3\41\2\2249\50800\20021\53700\4\6\1\5\6\2\7\40\2147483695\14\40\1\20\4\11\Result Body\21\41\2\0\0\8436\1000\27\8\2\60\40\1\66\41\2\15748&
+ display-instance : \1100\17772\2900\143\40\4294967295\151\41\2\0\1100\15185\2900\170\40\536870969\231\6\0\288\6\0\289\4\4\0x00\290\4\4\0x00\310\6\0\5116\6\0\5233\4\0\\5234\&
+ display-instance : 4\4\left\5296\4\0\\5302\6\0\5314\6\0\5315\2\0\5345\4\0\\5347\4\0\\5352\2\0\5353\4\0\\5354\2\0\5368\4\0\\5369\4\0\\5373\6\0\5375\6\0\5378\4\0\\5379\2\0\53&
+ display-instance : 80\4\0\\5382\6\0\5383\4\0\\5384\2\0\5397\4\0\\5403\6\0\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
+}
 end
 begin filter
    name           : HLX:HLX:CustomPlugin:SE Base64ToAttachment Plugin SetF`!
@@ -1235,7 +1279,7 @@ begin filter
    action {
       set-field   : 0\536870966\108\15\HtmlToPdfPlugin\1\102\1\@\16\HLX:CustomPlugin\1\536870963\0\1\4\1\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
 end
 begin filter
@@ -1254,7 +1298,7 @@ begin filter
    action {
       set-field   : 0\536870950\108\16\HTMLToTextPlugin\2\102\1\@\16\HLX:CustomPlugin\1\536870949\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870968\0\1\4\1\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
 end
 begin filter
@@ -1273,13 +1317,13 @@ begin filter
    action {
       set-field   : 0\536870961\108\15\JsonQueryPlugin\2\102\1\@\16\HLX:CustomPlugin\1\536870960\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870967\0\1\4\1\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
 end
 begin filter
    name           : HLX:HLX:CustomPlugin:SE RESTHttp Plugin SetF`!
    guid           : 8a0ed7f100d460bacc115f9c1ac28f3e
-   timestamp      : 1747372895
+   timestamp      : 1747375776
    owner          : dice
    last-changed   : dice
    filter-op      : 64
@@ -1293,10 +1337,15 @@ begin filter
       set-field   : 0\536870980\108\14\RestHttpPlugin\7\102\1\@\16\HLX:CustomPlugin\1\536870970\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870971\0\1\4\102\1\@\16\HLX:CustomPlugi
       set-field   : 0\n\1\536870977\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870978\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870979\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870982\
       set-field   : 0\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870981\0\1\4\1\
+      set-field   : 1\536870984\108\14\RestHttpPlugin\7\102\1\@\16\HLX:CustomPlugin\1\536870970\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870971\0\1\4\102\1\@\16\HLX:CustomPlugi
+      set-field   : 1\n\1\536870977\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870978\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870979\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870982\
+      set-field   : 1\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870981\0\1\4\2\
+      set-field   : 2\536870985\108\14\RestHttpPlugin\7\102\1\@\16\HLX:CustomPlugin\1\536870970\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870971\0\1\4\102\1\@\16\HLX:CustomPlugi
+      set-field   : 2\n\1\536870977\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870978\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870979\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870982\
+      set-field   : 2\0\1\4\102\1\@\16\HLX:CustomPlugin\1\536870981\0\1\4\3\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
-   errhandler-name: 
 end
 begin filter
    name           : HLX:HLX:CustomPlugin:SE RandomNumber Plugin SetF`!
@@ -1405,7 +1454,7 @@ begin active link
    svc-InFld-map  : 3\536870929\101\6\5\536870963\102\1\@\1\@\1\536870963\0\1\4\536870968\102\1\@\1\@\1\536870968\0\1\4\
    svc-OutFld-map : 1\536870966\102\1\@\16\HLX:CustomPlugin\1\536870966\0\1\4\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
 end
 begin active link
@@ -1428,7 +1477,7 @@ begin active link
    svc-InFld-map  : 2\536870929\101\6\4\536870949\102\1\@\1\@\1\536870949\0\1\4\
    svc-OutFld-map : 1\536870950\102\1\@\16\HLX:CustomPlugin\1\536870950\0\1\4\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
 end
 begin active link
@@ -1451,12 +1500,12 @@ begin active link
    svc-InFld-map  : 3\536870929\101\6\6\536870960\102\1\@\1\@\1\536870960\0\1\4\536870967\102\1\@\1\@\1\536870967\0\1\4\
    svc-OutFld-map : 1\536870961\102\1\@\16\HLX:CustomPlugin\1\536870961\0\1\4\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
 end
 begin active link
    name           : HLX:CustomPlugin:Btn REST SE
-   timestamp      : 1747372722
+   timestamp      : 1747375747
    export-version : 12
    owner          : dice
    last-changed   : dice
@@ -1473,9 +1522,10 @@ begin active link
    svc-rqstId-map : 0
    svc-InFld-map  : 8\536870929\101\6\7\536870979\102\1\@\1\@\1\536870979\0\1\4\536870982\102\1\@\1\@\1\536870982\0\1\4\536870981\102\1\@\1\@\1\536870981\0\1\4\536870978\102
    svc-InFld-map  : \1\@\1\@\1\536870978\0\1\4\536870977\102\1\@\1\@\1\536870977\0\1\4\536870970\102\1\@\1\@\1\536870970\0\1\4\536870971\102\1\@\1\@\1\536870971\0\1\4\
-   svc-OutFld-map : 1\536870980\102\1\@\16\HLX:CustomPlugin\1\536870980\0\1\4\
+   svc-OutFld-map : 3\536870980\102\1\@\16\HLX:CustomPlugin\1\536870980\0\1\4\536870984\102\1\@\16\HLX:CustomPlugin\1\536870984\0\1\4\536870985\102\1\@\16\HLX:CustomPlugin\1
+   svc-OutFld-map : \536870985\0\1\4\
    }
-   object-prop    : 2\90015\2\4\90016\4\1\1\
+   object-prop    : 2\90016\4\1\1\90015\2\4\
    errhandler-opt : 0
    errhandler-name: 
 end
