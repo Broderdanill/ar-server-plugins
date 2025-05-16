@@ -63,7 +63,7 @@ Place all JARs in a `lib/` folder.
 
 ```bash
 javac --release 17 \
-  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/json-path-2.9.0.jar:./lib/jackson-core-2.19.0.jar:./lib/jackson-databind-2.19.0.jar:./lib/jackson-annotations-2.19.0.jar" \
+  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar:./lib/json-path-2.9.0.jar:./lib/jackson-core-2.19.0.jar:./lib/jackson-databind-2.19.0.jar:./lib/jackson-annotations-2.19.0.jar:./lib/accessors-smart-2.4.8.jar:./lib/json-smart-2.4.8.jar" \
   -d classes \
   JsonQueryPlugin.java
 ```
@@ -80,6 +80,8 @@ jar cf jsonqueryplugin.jar -C classes .
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-core-2.19.0.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-databind-2.19.0.jar</pathelement>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/jackson-annotations-2.19.0.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/accessors-smart-2.4.8.jar</pathelement>
+  <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/lib/json-smart-2.4.8.jar</pathelement>
 
 </plugin>
 
