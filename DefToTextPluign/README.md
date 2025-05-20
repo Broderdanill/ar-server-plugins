@@ -3,6 +3,8 @@
 A BMC AR System (Helix Innovation Suite 25.1) Filter API Plugin that reads a `.def` file (attached as an `AttachmentValue`) and returns its content as a plain text string.  
 Useful for workflows that need to inspect, parse, or log contents of AR Definition export files.
 
+!!! THIS VERSION ONLY WORKS ON SUBMIT ACTION !!!
+
 ---
 
 ## ✅ Features
