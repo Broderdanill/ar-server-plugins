@@ -48,7 +48,7 @@ Place all JARs in a `../arapi/` folder (or equivalent).
 
 ```bash
 javac --release 17 \
-  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:.../arapi/arpluginsvr251_build001.jar" \
+  -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" \
   -d classes \
   DefToTextPlugin.java
 ```
