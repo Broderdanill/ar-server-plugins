@@ -86,8 +86,11 @@ Plugin Call Settings:
 
 Input Mapping:
 
-- Param 1 → `$DefinitionFile$` (Attachment field)
-- Param 1 → `FIELD ID` (Attachment field ID) as int
+| Index | Typ       | Beskrivning                    |
+| ----- | --------- | ------------------------------ |
+| 0     | `String`  | Formulärnamn                   |
+| 1     | `String`  | Request ID                     |
+| 2     | `Integer` | Field ID för attachment-fältet |
 
 Return Mapping:
 
