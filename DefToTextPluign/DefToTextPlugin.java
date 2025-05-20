@@ -25,17 +25,25 @@ public class DefToTextPlugin extends ARFilterAPIPlugin {
 
         AttachmentValue attachment = (AttachmentValue) args.get(0).getValue();
 
-        try (InputStream inputStream = new ByteArrayInputStream(attachment.getValue());
-             InputStreamReader reader = new InputStreamReader(inputStream, "UTF-8");
-             BufferedReader br = new BufferedReader(reader)) {
+        try {
+            byte[] data = attachment.getValue();
 
-            StringBuilder text = new StringBuilder();
-            String line;
-            while ((line = br.readLine()) != null) {
-                text.append(line).append("\n");
+            if (data == null || data.length == 0) {
+                throw new Exception("Attachment has no data. It must be passed in the same transaction.");
             }
 
-            results.add(new Value(text.toString().trim()));
+            try (InputStream inputStream = new ByteArrayInputStream(data);
+                 InputStreamReader reader = new InputStreamReader(inputStream, "UTF-8");
+                 BufferedReader br = new BufferedReader(reader)) {
+
+                StringBuilder text = new StringBuilder();
+                String line;
+                while ((line = br.readLine()) != null) {
+                    text.append(line).append("\n");
+                }
+
+                results.add(new Value(text.toString().trim()));
+            }
 
         } catch (Exception e) {
             List<StatusInfo> statusList = new ArrayList<>();

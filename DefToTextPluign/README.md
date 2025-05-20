@@ -87,6 +87,7 @@ Plugin Call Settings:
 Input Mapping:
 
 - Param 1 → `$DefinitionFile$` (Attachment field)
+- Param 1 → `FIELD ID` (Attachment field ID) as int
 
 Return Mapping:
 
