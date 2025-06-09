@@ -57,7 +57,7 @@ Each log entry is written as a **single line** in this format:
 
 ### Compile:
 ```bash
-javac --release 17 -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d src/com/example/arfilter/LogToFilePlugin.java
+javac --release 17 -cp "../arapi/arapi251_build001.jar:../arapi/arutil251_build001.jar:../arapi/arpluginsvr251_build001.jar" -d classes LogToFilePlugin.java
 ```
 
 ### Package:
