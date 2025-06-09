@@ -15,6 +15,9 @@ import java.util.List;
 
 public class LogToFilePlugin extends ARFilterAPIPlugin {
 
+    private static final long MAX_FILE_SIZE = 10 * 1024 * 1024; // 10 MB
+    private static final int MAX_BACKUP_FILES = 5;
+
     @Override
     public List<Value> filterAPICall(ARPluginContext context, List<Value> args) throws ARException {
         List<Value> result = new ArrayList<>();
@@ -32,9 +35,9 @@ public class LogToFilePlugin extends ARFilterAPIPlugin {
 
         try {
             File logFile = new File(logFilePath);
+            File parentDir = logFile.getParentFile();
 
             // Skapa mappstruktur om den inte finns
-            File parentDir = logFile.getParentFile();
             if (parentDir != null && !parentDir.exists()) {
                 if (!parentDir.mkdirs()) {
                     throw new IOException("Failed to create directory: " + parentDir.getAbsolutePath());
@@ -48,16 +51,20 @@ public class LogToFilePlugin extends ARFilterAPIPlugin {
                 }
             }
 
+            // Kontrollera om rotering behövs
+            if (logFile.length() > MAX_FILE_SIZE) {
+                rotateLogs(logFile);
+            }
+
             // Skapa loggrad
             String timestamp = ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
             String logLine = String.format("%s [%s] [%s] %s%n", timestamp, application, logLevel.toUpperCase(), message);
 
-            // Skriv till fil
+            // Skriv till loggfilen
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(logFile, true))) {
                 writer.write(logLine);
             }
 
-            // Returnera status tillbaka till AR
             result.add(new Value("Log entry written to " + logFilePath));
             return result;
 
@@ -70,5 +77,28 @@ public class LogToFilePlugin extends ARFilterAPIPlugin {
             statusList.add(new StatusInfo(2, 10012, "Unexpected error: " + e.getMessage()));
             throw new ARException(statusList);
         }
+    }
+
+    private void rotateLogs(File logFile) {
+        String baseName = logFile.getAbsolutePath();
+
+        // Ta bort äldsta om den finns
+        File oldest = new File(baseName + "." + MAX_BACKUP_FILES);
+        if (oldest.exists()) {
+            oldest.delete();
+        }
+
+        // Flytta övriga uppåt
+        for (int i = MAX_BACKUP_FILES - 1; i >= 1; i--) {
+            File src = new File(baseName + "." + i);
+            File dst = new File(baseName + "." + (i + 1));
+            if (src.exists()) {
+                src.renameTo(dst);
+            }
+        }
+
+        // Flytta huvudfilen till .1
+        File firstBackup = new File(baseName + ".1");
+        logFile.renameTo(firstBackup);
     }
 }
