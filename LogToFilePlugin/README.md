@@ -9,8 +9,10 @@ This plugin is designed to integrate seamlessly into AR workflow filters and sup
 ## ✅ Features
 
 - Log messages to any custom file path
+- Automatically creates the file and directory if they do not exist
 - Automatic timestamping (UTC, ISO 8601)
 - Includes log level and application context
+- Returns a result string back to AR System
 - Plain-text format optimized for parsing
 - Simple configuration and deployment
 - Requires no external libraries (pure Java)
@@ -21,12 +23,12 @@ This plugin is designed to integrate seamlessly into AR workflow filters and sup
 
 This plugin accepts **four parameters** via the AR Filter Plugin API:
 
-| Parameter   | Type   | Description                                                   |
-|-------------|--------|---------------------------------------------------------------|
-| `log_file`  | String | Full path to log file (e.g. `/opt/bmc/ARSystem/db/log.txt`)   |
-| `message`   | String | The message to log                                            |
-| `log_level` | String | Severity (e.g. `INFO`, `WARN`, `ERROR`, `DEBUG`)              |
-| `application` | String | Name of the calling application or module                  |
+| Parameter     | Type   | Description                                                   |
+|---------------|--------|---------------------------------------------------------------|
+| `log_file`    | String | Full path to log file (e.g. `/opt/bmc/ARSystem/db/log.txt`)   |
+| `message`     | String | The message to log                                            |
+| `log_level`   | String | Severity (e.g. `INFO`, `WARN`, `ERROR`, `DEBUG`)              |
+| `application` | String | Name of the calling application or module                     |
 
 ---
 
@@ -43,6 +45,18 @@ Each log entry is written as a **single line** in this format:
 - **Application**: Provided by caller
 - **Log Level**: Provided by caller
 - **Message**: Custom string, typically error or audit text
+
+---
+
+## 📬 Return Value
+
+Returns a single output parameter to AR System (character string):
+
+```
+Log entry written to /opt/bmc/ARSystem/db/myapp.log
+```
+
+If an error occurs (e.g., permission issue), a descriptive error is thrown back to AR Server.
 
 ---
 
@@ -74,7 +88,7 @@ jar cf logtofileplugin.jar -C classes .
 ```xml
 <plugin>
   <name>LogToFilePlugin</name>
-  <classname>com.example.arfilter.LogToFilePlugin</classname>
+  <classname>com.example.LogToFilePlugin</classname>
   <pathelement type="location">/opt/bmc/ARSystem/pluginsvr/logtofileplugin.jar</pathelement>
 </plugin>
 ```
@@ -102,17 +116,4 @@ Plugin-Filter-LogToFilePlugin: logtofileplugin LogToFilePlugin
 4. `"UserSync"`
 
 ### Output Mapping:
-None required – the plugin writes directly to file.
-
----
-
-## 📄 License
-
-This plugin is released under the MIT License. See `LICENSE` for details.
-
----
-
-## 👨‍💻 Maintainer
-
-Developed by [Your Name / Team]  
-Contact: [your.email@example.com]
+- Result Index 0 → A Character Field (e.g. `Log_Response`) to store the confirmation string.
