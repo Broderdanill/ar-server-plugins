@@ -6,8 +6,10 @@ import com.bmc.arsys.api.*;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -60,8 +62,9 @@ public class LogToFilePlugin extends ARFilterAPIPlugin {
             String timestamp = ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
             String logLine = String.format("%s [%s] [%s] %s%n", timestamp, application, logLevel.toUpperCase(), message);
 
-            // Skriv till loggfilen
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(logFile, true))) {
+            // Skriv till loggfilen med UTF-8
+            try (BufferedWriter writer = new BufferedWriter(
+                     new OutputStreamWriter(new FileOutputStream(logFile, true), StandardCharsets.UTF_8))) {
                 writer.write(logLine);
             }
 
