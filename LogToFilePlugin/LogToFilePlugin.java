@@ -30,12 +30,19 @@ public class LogToFilePlugin extends ARFilterAPIPlugin {
             throw new ARException(statusList);
         }
 
-        String logFilePath = (String) args.get(0).getValue();
-        String message = (String) args.get(1).getValue();
-        String logLevel = (String) args.get(2).getValue();
-        String application = (String) args.get(3).getValue();
-
         try {
+            String logFilePath = (String) args.get(0).getValue();
+
+            // Re-encode all string inputs to ensure UTF-8 correctness
+            String rawMessage = (String) args.get(1).getValue();
+            String message = new String(rawMessage.getBytes("ISO-8859-1"), StandardCharsets.UTF_8);
+
+            String rawLogLevel = (String) args.get(2).getValue();
+            String logLevel = new String(rawLogLevel.getBytes("ISO-8859-1"), StandardCharsets.UTF_8);
+
+            String rawApplication = (String) args.get(3).getValue();
+            String application = new String(rawApplication.getBytes("ISO-8859-1"), StandardCharsets.UTF_8);
+
             File logFile = new File(logFilePath);
             File parentDir = logFile.getParentFile();
 
